@@ -9,6 +9,7 @@ After install this plugin
 `cd .vim/bundle/YouCompleteMe`  
 `python3 install.py --clang-completer` --for C/C++  
 add `--java-completer` for Java  
+add `--ts-completer` for JavaScript/TypeScript  
 add `--cs-completer` for C#  
 add `--go-completer` for Go  
 add `--rust-completer` for Rust  
