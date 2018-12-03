@@ -98,12 +98,8 @@ set wildmenu
 
 set foldmethod=indent
 set foldlevel=99
-"nnoremap <space> za
 
 set clipboard=unnamed
-
-"color asmanian2
-"cmdheight=1
 
 "autocomplete
 let g:pydiction_location='~/.vim/bundle/pydiction/complete-dict'
