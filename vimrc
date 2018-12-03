@@ -21,7 +21,7 @@ Plugin 'scrooloose/syntastic'
 
 Plugin 'tpope/vim-fugitive'
 
-Bundle 'bling/vim-airline'
+Plugin 'bling/vim-airline'
 
 Plugin 'nvie/vim-flake8'
 
@@ -31,7 +31,7 @@ Plugin 'lilydjwg/colorizer'
 
 Plugin 'Lokaltog/powerline'
 
-Bundle 'rkulla/pydiction'
+Plugin 'rkulla/pydiction'
 
 Plugin 'scrooloose/nerdtree'
 
