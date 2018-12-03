@@ -88,7 +88,6 @@ set fencs=utf-8,ucs-bom,shift-jis,gb18030,gbk,gb2312,cp936
 set fileencoding=utf-8
 set fileencodings=utf-8,ucs-bom,cp936
 
-
 set ruler
 
 set scrolloff=5
@@ -99,7 +98,7 @@ set wildmenu
 
 set foldmethod=indent
 set foldlevel=99
-nnoremap <space> za
+"nnoremap <space> za
 
 set clipboard=unnamed
 
@@ -111,16 +110,12 @@ let g:pydiction_location='~/.vim/bundle/pydiction/complete-dict'
 let g:pydiction_menu_height=4
 
 "split navigations
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
+"nnoremap <C-J> <C-W><C-J>
+"nnoremap <C-K> <C-W><C-K>
+"nnoremap <C-L> <C-W><C-L>
+"nnoremap <C-H> <C-W><C-H>
 
 set splitbelow
 set splitright
 
-set incsearch
-
 set nobackup
-
-"let g:clang_compilation_database = './build'
