@@ -13,7 +13,7 @@ Plugin 'VundleVim/Vundle.vim'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 
-"Plugin 'Valloric/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe'
 
 Plugin 'vim-scripts/indentpython.vim'
 
@@ -32,6 +32,8 @@ Plugin 'lilydjwg/colorizer'
 Plugin 'Lokaltog/powerline'
 
 Bundle 'rkulla/pydiction'
+
+Plugin 'scrooloose/nerdtree'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -115,3 +117,7 @@ set splitbelow
 set splitright
 
 set nobackup
+
+"for nerdtree map
+map <C-o> :NERDTreeToggle<CR>
+
