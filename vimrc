@@ -35,6 +35,8 @@ Plugin 'rkulla/pydiction'
 
 Plugin 'scrooloose/nerdtree'
 
+Plugin 'luochen1990/rainbow'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -121,3 +123,5 @@ set nobackup
 "for nerdtree map
 map <C-o> :NERDTreeToggle<CR>
 
+"Set rainbox config
+let g:rainbow_active = 1
