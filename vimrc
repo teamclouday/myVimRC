@@ -35,7 +35,7 @@ Plugin 'rkulla/pydiction'
 
 Plugin 'scrooloose/nerdtree'
 
-Plugin 'luochen1990/rainbow'
+"Plugin 'luochen1990/rainbow'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -58,10 +58,6 @@ syntax on
 let python_highlight_all=1
 
 set backspace=indent,eol,start
-
-filetype plugin on
-filetype indent on
-filetype plugin indent on
 
 set showcmd
 set showmatch
@@ -110,10 +106,10 @@ let g:pydiction_location='~/.vim/bundle/pydiction/complete-dict'
 let g:pydiction_menu_height=4
 
 "split navigations
-"nnoremap <C-J> <C-W><C-J>
-"nnoremap <C-K> <C-W><C-K>
-"nnoremap <C-L> <C-W><C-L>
-"nnoremap <C-H> <C-W><C-H>
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
 set splitbelow
 set splitright
@@ -123,5 +119,7 @@ set nobackup
 "for nerdtree map
 map <C-o> :NERDTreeToggle<CR>
 
+let g:ycm_confirm_extra_conf = 0 "disable question for ycm
+
 "Set rainbox config
-let g:rainbow_active = 1
+"let g:rainbow_active = 1
