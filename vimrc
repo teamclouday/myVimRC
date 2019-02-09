@@ -99,7 +99,7 @@ set wildmenu
 set foldmethod=indent
 set foldlevel=99
 
-set clipboard=unnamed
+set clipboard=unnamedplus
 
 "autocomplete
 let g:pydiction_location='~/.vim/bundle/pydiction/complete-dict'
