@@ -129,6 +129,6 @@ let g:airline_powerline_fonts=1
 let g:ycm_global_ycm_extra_conf="~/.ycm_extra_conf.py"
 
 "Autocomplete for brackets
-:inoremap ( ()<Esc>i
-:inoremap { {}<Esc>i
-:inoremap [ []<Esc>i
+inoremap ( ()<Esc>i
+inoremap { {}<Esc>i
+inoremap [ []<Esc>i
