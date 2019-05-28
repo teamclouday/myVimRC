@@ -15,21 +15,23 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'Valloric/YouCompleteMe'
 
-Plugin 'vim-scripts/indentpython.vim'
+"Plugin 'vim-scripts/indentpython.vim'
 
-Plugin 'scrooloose/syntastic'
+"Plugin 'scrooloose/syntastic'
 
 Plugin 'tpope/vim-fugitive'
 
+Plugin 'jiangmiao/auto-pairs'
+
 Plugin 'bling/vim-airline'
 
-Plugin 'nvie/vim-flake8'
+"Plugin 'nvie/vim-flake8'
 
 Plugin 'jnurmine/Zenburn'
 
 Plugin 'lilydjwg/colorizer'
 
-Plugin 'Lokaltog/powerline'
+"Plugin 'Lokaltog/powerline'
 
 Plugin 'rkulla/pydiction'
 
@@ -129,8 +131,8 @@ let g:airline_powerline_fonts=1
 let g:ycm_global_ycm_extra_conf="~/.ycm_extra_conf.py"
 
 "Autocomplete for brackets
-inoremap ( ()<Esc>i
-inoremap { {}<Esc>i
-inoremap [ []<Esc>i
-inoremap " ""<Esc>i
-inoremap ' ''<Esc>i
+"inoremap ( ()<Esc>i
+"inoremap { {}<Esc>i
+"inoremap [ []<Esc>i
+"inoremap " ""<Esc>i
+"inoremap ' ''<Esc>i
