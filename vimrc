@@ -38,7 +38,10 @@ Plugin 'powerline/powerline'
 Plugin 'rstacruz/vim-closer'
 
 " A Vim plugin to colorize all text in the form #rrggbb or #rgb
-Plugin 'lilydjwg/colorizer'
+"Plugin 'lilydjwg/colorizer'
+
+" hexokinase.vim - (Neo)Vim plugin for asynchronously displaying the colours in the file (#rrggbb, #rgb, rgb(a)? functions, hsl(a)? functions, web colours, custom patterns)
+Plugin 'RRethy/vim-hexokinase'
 
 " Rainbow Parentheses Improved, shorter code, no level limit, smooth and fast, powerful configuration
 "Plugin 'luochen1990/rainbow'
@@ -204,3 +207,6 @@ let g:julia_cmdline = ['julia', '--startup-file=no', '--history-file=no', '-e', 
 \   ']
 
 let g:gitgutter_realtime = 1
+
+let g:Hexokinase_highlighters = ['foreground']
+let g:Hexokinase_ftEnabled = ['css', 'html', 'javascript']
