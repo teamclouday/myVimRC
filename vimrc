@@ -22,6 +22,9 @@ Plugin 'ycm-core/lsp-examples'
 " fugitive.vim: A Git wrapper so awesome, it should be illegal
 Plugin 'tpope/vim-fugitive'
 
+" A Vim plugin which shows git diff markers in the sign column and stages/previews/undoes hunks and partial hunks
+Plugin 'airblade/vim-gitgutter'
+
 " Lean & mean status/tabline for vim that's light as air
 Plugin 'bling/vim-airline'
 
@@ -112,6 +115,8 @@ set ruler
 
 set scrolloff=5
 
+set updatetime=1500
+
 set autowrite
 
 set wildmenu
@@ -197,3 +202,5 @@ let g:julia_cmdline = ['julia', '--startup-file=no', '--history-file=no', '-e', 
 \       server.runlinter = true;
 \       run(server);
 \   ']
+
+let g:gitgutter_realtime = 1
