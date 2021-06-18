@@ -11,11 +11,10 @@ After install this plugin
 
 #### Julia YCM Server
 
-Install `LanguageServer` package in julia  
-Run the following command in `~/.vim/bundle/lsp-examples`:
-```bash
-./install.py --enable-julia
-```
+Install following packages in julia:
+* `LanguageServer`
+* `StaticLint`
+* `SymbolServer`
 
 #### Markdown Preview
 
