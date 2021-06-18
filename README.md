@@ -16,3 +16,7 @@ Run the following command in `~/.vim/bundle/lsp-examples`:
 ```bash
 ./install.py --enable-julia
 ```
+
+#### Markdown Preview
+
+Visit [markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim) for installation instructions
