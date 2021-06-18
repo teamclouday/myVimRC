@@ -17,7 +17,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'ycm-core/YouCompleteMe'
 
 " Use any language server with YouCompleteMe
-Plugin 'ycm-core/lsp-examples'
+"Plugin 'ycm-core/lsp-examples'
 
 " fugitive.vim: A Git wrapper so awesome, it should be illegal
 Plugin 'tpope/vim-fugitive'
@@ -59,7 +59,10 @@ Plugin 'tpope/vim-commentary'
 Plugin 'rakr/vim-one'
 
 " Vim support for Julia
-Plugin 'JuliaEditorSupport/julia-vim', {'for': 'julia'}
+Plugin 'JuliaEditorSupport/julia-vim'
+
+" Language Server Protocol (LSP) support for vim and neovim
+"Plugin 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': 'bash install.sh'}
 
 " markdown preview plugin for (neo)vim
 Plugin 'iamcco/markdown-preview.nvim' 
@@ -196,18 +199,40 @@ let g:ycm_global_ycm_extra_conf = "~/.ycm_extra_conf.py"
 "inoremap ' ''<Esc>i
 
 " Configure Julia language server
+" let g:LanguageClient_autoStart = 1
+" let g:LanguageClient_serverCommands = {
+" \   'julia': ['julia', '--startup-file=no', '--history-file=no', '-e', '
+" \       using LanguageServer;
+" \       using Pkg;
+" \       import StaticLint;
+" \       import SymbolServer;
+" \       env_path = dirname(Pkg.Types.Context().env.project_file);
+" \       
+" \       server = LanguageServer.LanguageServerInstance(stdin, stdout, env_path, "");
+" \       server.runlinter = true;
+" \       run(server);
+" \   ']
+" \ }
+
 let g:julia_cmdline = ['julia', '--startup-file=no', '--history-file=no', '-e', '
 \       using LanguageServer;
 \       using Pkg;
 \       import StaticLint;
 \       import SymbolServer;
 \       env_path = dirname(Pkg.Types.Context().env.project_file);
-\       debug = false;
 \
-\       server = LanguageServer.LanguageServerInstance(stdin, stdout, debug, env_path, "", Dict());
+\       server = LanguageServer.LanguageServerInstance(stdin, stdout, env_path, "");
 \       server.runlinter = true;
 \       run(server);
 \   ']
+let g:ycm_language_server = [
+\   { 
+\       'name': 'julia',
+\       'filetypes': [ 'julia' ],
+\       'project_root_files': [ 'Project.toml' ],
+\	    'cmdline': g:julia_cmdline
+\   },
+\ ]
 
 let g:gitgutter_realtime = 1
 
