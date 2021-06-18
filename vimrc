@@ -185,7 +185,7 @@ let g:airline_section_z = airline#section#create(['windowswap', 'obsession', '%3
 "let g:airline_theme = 'wombat'
 
 let g:ycm_confirm_extra_conf = 0 "disable question for ycm
-"set completeopt-=preview
+set completeopt-=preview
 let g:ycm_add_preview_to_completeopt = 1
 let g:ycm_global_ycm_extra_conf = "~/.ycm_extra_conf.py"
 
