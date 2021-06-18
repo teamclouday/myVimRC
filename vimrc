@@ -61,6 +61,9 @@ Plugin 'rakr/vim-one'
 " Vim support for Julia
 Plugin 'JuliaEditorSupport/julia-vim', {'for': 'julia'}
 
+" markdown preview plugin for (neo)vim
+Plugin 'iamcco/markdown-preview.nvim' 
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -210,3 +213,6 @@ let g:gitgutter_realtime = 1
 
 let g:Hexokinase_highlighters = ['foreground']
 let g:Hexokinase_ftEnabled = ['css', 'html', 'javascript']
+
+" Configure markdown key map
+nmap <C-p> <Plug>MarkdownPreviewToggle
