@@ -62,7 +62,7 @@ Plugin 'rakr/vim-one'
 Plugin 'JuliaEditorSupport/julia-vim'
 
 " Language Server Protocol (LSP) support for vim and neovim
-"Plugin 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': 'bash install.sh'}
+Plugin 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': 'bash install.sh'}
 
 " markdown preview plugin for (neo)vim
 Plugin 'iamcco/markdown-preview.nvim' 
@@ -185,7 +185,7 @@ let g:airline_section_z = airline#section#create(['windowswap', 'obsession', '%3
 "let g:airline_theme = 'wombat'
 
 let g:ycm_confirm_extra_conf = 0 "disable question for ycm
-set completeopt-=preview
+"set completeopt-=preview
 let g:ycm_add_preview_to_completeopt = 1
 let g:ycm_global_ycm_extra_conf = "~/.ycm_extra_conf.py"
 
@@ -199,40 +199,40 @@ let g:ycm_global_ycm_extra_conf = "~/.ycm_extra_conf.py"
 "inoremap ' ''<Esc>i
 
 " Configure Julia language server
-" let g:LanguageClient_autoStart = 1
-" let g:LanguageClient_serverCommands = {
-" \   'julia': ['julia', '--startup-file=no', '--history-file=no', '-e', '
-" \       using LanguageServer;
-" \       using Pkg;
-" \       import StaticLint;
-" \       import SymbolServer;
-" \       env_path = dirname(Pkg.Types.Context().env.project_file);
-" \       
-" \       server = LanguageServer.LanguageServerInstance(stdin, stdout, env_path, "");
-" \       server.runlinter = true;
-" \       run(server);
-" \   ']
-" \ }
-
-let g:julia_cmdline = ['julia', '--startup-file=no', '--history-file=no', '-e', '
+let g:LanguageClient_autoStart = 1
+let g:LanguageClient_serverCommands = {
+\   'julia': ['julia', '--startup-file=no', '--history-file=no', '-e', '
 \       using LanguageServer;
 \       using Pkg;
 \       import StaticLint;
 \       import SymbolServer;
 \       env_path = dirname(Pkg.Types.Context().env.project_file);
-\
+\       
 \       server = LanguageServer.LanguageServerInstance(stdin, stdout, env_path, "");
 \       server.runlinter = true;
 \       run(server);
 \   ']
-let g:ycm_language_server = [
-\   { 
-\       'name': 'julia',
-\       'filetypes': [ 'julia' ],
-\       'project_root_files': [ 'Project.toml' ],
-\	    'cmdline': g:julia_cmdline
-\   },
-\ ]
+\ }
+
+" let g:julia_cmdline = ['julia', '--startup-file=no', '--history-file=no', '-e', '
+" \       using LanguageServer;
+" \       using Pkg;
+" \       import StaticLint;
+" \       import SymbolServer;
+" \       env_path = dirname(Pkg.Types.Context().env.project_file);
+" \
+" \       server = LanguageServer.LanguageServerInstance(stdin, stdout, env_path, "");
+" \       server.runlinter = true;
+" \       run(server);
+" \   ']
+" let g:ycm_language_server = [
+" \   { 
+" \       'name': 'julia',
+" \       'filetypes': [ 'julia' ],
+" \       'project_root_files': [ 'Project.toml' ],
+" \	    'cmdline': g:julia_cmdline
+" \   },
+" \ ]
 
 let g:gitgutter_realtime = 1
 
