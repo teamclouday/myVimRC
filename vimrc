@@ -67,6 +67,9 @@ Plugin 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': 'bash install.
 " markdown preview plugin for (neo)vim
 Plugin 'iamcco/markdown-preview.nvim' 
 
+" Vim runtime files for OpenGL Shading Language
+Plugin 'tikhomirov/vim-glsl'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
