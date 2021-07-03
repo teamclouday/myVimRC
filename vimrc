@@ -140,6 +140,9 @@ set clipboard=unnamedplus
 
 set t_Co=256
 
+set tags=tags;
+set autochdir
+
 "colo molokai
 "colorscheme onehalfdark
 "let g:airline_theme='onehalfdark'
