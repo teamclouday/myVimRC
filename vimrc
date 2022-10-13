@@ -1,92 +1,81 @@
 set nocompatible              " required
 filetype off                  " required
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+call plug#begin()
+" The default plugin directory will be as follows:
+"   - Vim (Linux/macOS): '~/.vim/plugged'
+"   - Vim (Windows): '~/vimfiles/plugged'
+"   - Neovim (Linux/macOS/Windows): stdpath('data') . '/plugged'
+" You can specify a custom plugin directory by passing it as the argument
+"   - e.g. `call plug#begin('~/.vim/plugged')`
+"   - Avoid using standard Vim directory names like 'plugin'
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
+" Make sure you use single quotes
 
 " A code-completion engine for Vim
-Plugin 'ycm-core/YouCompleteMe'
+Plug 'ycm-core/YouCompleteMe'
 
 " Use any language server with YouCompleteMe
-"Plugin 'ycm-core/lsp-examples'
+"Plug 'ycm-core/lsp-examples'
 
 " fugitive.vim: A Git wrapper so awesome, it should be illegal
-Plugin 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive'
 
 " A Vim plugin which shows git diff markers in the sign column and stages/previews/undoes hunks and partial hunks
-Plugin 'airblade/vim-gitgutter'
+Plug 'airblade/vim-gitgutter'
 
 " Lean & mean status/tabline for vim that's light as air
-Plugin 'bling/vim-airline'
+Plug 'vim-airline/vim-airline'
 
 " A collection of themes for vim-airline
-Plugin 'vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline-themes'
 
 " Powerline is a statusline plugin for vim
-Plugin 'powerline/powerline'
+Plug 'powerline/powerline'
 
 " Closes brackets
-Plugin 'rstacruz/vim-closer'
+Plug 'rstacruz/vim-closer'
 
 " A Vim plugin to colorize all text in the form #rrggbb or #rgb
-"Plugin 'lilydjwg/colorizer'
+"Plug 'lilydjwg/colorizer'
 
 " hexokinase.vim - (Neo)Vim plugin for asynchronously displaying the colours in the file (#rrggbb, #rgb, rgb(a)? functions, hsl(a)? functions, web colours, custom patterns)
-Plugin 'RRethy/vim-hexokinase'
+Plug 'RRethy/vim-hexokinase'
 
 " Rainbow Parentheses Improved, shorter code, no level limit, smooth and fast, powerful configuration
-"Plugin 'luochen1990/rainbow'
+"Plug 'luochen1990/rainbow'
 
 " A tree explorer plugin for vim
-Plugin 'preservim/nerdtree'
+Plug 'preservim/nerdtree'
 
 " commentary.vim: comment stuff out
-Plugin 'tpope/vim-commentary'
+Plug 'tpope/vim-commentary'
 
 " Molokai color scheme for Vim
-"Plugin 'tomasr/molokai'
+"Plug 'tomasr/molokai'
 
 " Adaptation of one-light and one-dark colorschemes for Vim
-Plugin 'rakr/vim-one'
+Plug 'rakr/vim-one'
 
 " Vim support for Julia
-Plugin 'JuliaEditorSupport/julia-vim'
+Plug 'JuliaEditorSupport/julia-vim'
 
 " Language Server Protocol (LSP) support for vim and neovim
-Plugin 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': 'bash install.sh'}
+Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': 'bash install.sh'}
 
 " markdown preview plugin for (neo)vim
-Plugin 'iamcco/markdown-preview.nvim' 
+Plug 'iamcco/markdown-preview.nvim' 
 
 " Vim runtime files for OpenGL Shading Language
-Plugin 'tikhomirov/vim-glsl'
+Plug 'tikhomirov/vim-glsl'
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
 
-" Clean, vibrant and pleasing color schemes for Vim, Sublime Text, iTerm, gnome-terminal and more
-Bundle 'sonph/onehalf', {'rtp': 'vim/'}
+" Initialize plugin system
+" - Automatically executes `filetype plugin indent on` and `syntax enable`.
+call plug#end()
+" You can revert the settings after the call like so:
+"   filetype indent off   " Disable file-type-specific indentation
+"   syntax off            " Disable syntax highlighting
 
 syntax enable
 syntax on
@@ -141,7 +130,7 @@ set clipboard=unnamedplus
 set t_Co=256
 
 set tags=tags;
-set autochdir
+"set autochdir
 
 "colo molokai
 "colorscheme onehalfdark
