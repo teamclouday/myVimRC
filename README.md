@@ -1,6 +1,6 @@
 ## My .vimrc configure file  
-Be sure to `git clone` [Vundle](https://github.com/VundleVim/Vundle.vim) after using this configuration  
-After that, do `:PluginInstall` to install whatever plugin it configures
+Be sure to install [vim-plug](https://github.com/junegunn/vim-plug) after using this configuration  
+After that, do `:PlugInstall` to install whatever plugin it configures
 
 -----
 #### YouCompleteMe  
