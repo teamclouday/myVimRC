@@ -13,7 +13,7 @@ call plug#begin()
 " Make sure you use single quotes
 
 " A code-completion engine for Vim
-Plug 'ycm-core/YouCompleteMe'
+"Plug 'ycm-core/YouCompleteMe'
 
 " Use any language server with YouCompleteMe
 "Plug 'ycm-core/lsp-examples'
@@ -56,9 +56,6 @@ Plug 'tpope/vim-commentary'
 
 " Adaptation of one-light and one-dark colorschemes for Vim
 Plug 'rakr/vim-one'
-
-" Vim support for Julia
-Plug 'JuliaEditorSupport/julia-vim'
 
 " Language Server Protocol (LSP) support for vim and neovim
 Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': 'bash install.sh'}
@@ -192,42 +189,6 @@ let g:ycm_global_ycm_extra_conf = "~/.ycm_extra_conf.py"
 "inoremap [ []<Esc>i
 "inoremap " ""<Esc>i
 "inoremap ' ''<Esc>i
-
-" Configure Julia language server
-let g:LanguageClient_autoStart = 1
-let g:LanguageClient_serverCommands = {
-\   'julia': ['julia', '--startup-file=no', '--history-file=no', '-e', '
-\       using LanguageServer;
-\       using Pkg;
-\       import StaticLint;
-\       import SymbolServer;
-\       env_path = dirname(Pkg.Types.Context().env.project_file);
-\       
-\       server = LanguageServer.LanguageServerInstance(stdin, stdout, env_path, "");
-\       server.runlinter = true;
-\       run(server);
-\   ']
-\ }
-
-" let g:julia_cmdline = ['julia', '--startup-file=no', '--history-file=no', '-e', '
-" \       using LanguageServer;
-" \       using Pkg;
-" \       import StaticLint;
-" \       import SymbolServer;
-" \       env_path = dirname(Pkg.Types.Context().env.project_file);
-" \
-" \       server = LanguageServer.LanguageServerInstance(stdin, stdout, env_path, "");
-" \       server.runlinter = true;
-" \       run(server);
-" \   ']
-" let g:ycm_language_server = [
-" \   { 
-" \       'name': 'julia',
-" \       'filetypes': [ 'julia' ],
-" \       'project_root_files': [ 'Project.toml' ],
-" \	    'cmdline': g:julia_cmdline
-" \   },
-" \ ]
 
 let g:gitgutter_realtime = 1
 
