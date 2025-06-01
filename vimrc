@@ -40,7 +40,7 @@ Plug 'rstacruz/vim-closer'
 "Plug 'lilydjwg/colorizer'
 
 " hexokinase.vim - (Neo)Vim plugin for asynchronously displaying the colours in the file (#rrggbb, #rgb, rgb(a)? functions, hsl(a)? functions, web colours, custom patterns)
-Plug 'RRethy/vim-hexokinase'
+"Plug 'RRethy/vim-hexokinase'
 
 " Rainbow Parentheses Improved, shorter code, no level limit, smooth and fast, powerful configuration
 "Plug 'luochen1990/rainbow'
